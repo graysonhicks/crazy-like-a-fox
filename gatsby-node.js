@@ -7,15 +7,14 @@ exports.sourceNodes = async ({ actions }) => {
 
   const foxes = await Promise.all(
     count.map(async (count, i) => {
-      return await fetch(`https://randomfox.ca/floof/`).then(res =>
-        res.json().then(final => final)
+      return await fetch(`https://source.unsplash.com/300x300/?fox`).then(
+        res => res
       )
     })
   )
   foxes.forEach((fox, i) => {
     createNode({
-      link: fox.link,
-      image: fox.image,
+      image: fox.url,
       id: `foxNode${i}`,
       parent: null,
       children: [],
@@ -23,7 +22,7 @@ exports.sourceNodes = async ({ actions }) => {
         type: `foxNodes`,
         contentDigest: crypto
           .createHash(`md5`)
-          .update(JSON.stringify(fox))
+          .update(JSON.stringify(fox.url))
           .digest(`hex`),
       },
     })

@@ -36,7 +36,6 @@ export const withoutQuery = graphql`
     allFoxNodes {
       edges {
         node {
-          link
           localImage {
             childImageSharp {
               fluid(maxWidth: 500) {

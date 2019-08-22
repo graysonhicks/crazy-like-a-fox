@@ -23,7 +23,6 @@ class WithoutPage extends React.Component {
           allFoxNodes {
             edges {
               node {
-                link
                 image
               }
             }
@@ -41,7 +40,6 @@ export const withoutQuery = graphql`
     allFoxNodes {
       edges {
         node {
-          link
           image
         }
       }
