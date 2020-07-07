@@ -11,6 +11,21 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-remote-images`,
+      options: {
+        nodeType: 'multiImageFoxNodes',
+        imagePath: 'images',
+        type: 'array',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-remote-images`,
+      options: {
+        nodeType: 'noImagesFoxNodes',
+        imagePath: 'images',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-less',
       options: {
         javascriptEnabled: true,
