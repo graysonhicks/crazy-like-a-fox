@@ -28,7 +28,9 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-less',
       options: {
-        javascriptEnabled: true,
+        lessOptions: {
+          javascriptEnabled: true,
+        },
       },
     },
     {
@@ -49,6 +51,7 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
+        icon: 'src/gatsby.jpg',
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
