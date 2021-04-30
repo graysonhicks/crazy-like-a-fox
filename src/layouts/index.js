@@ -1,27 +1,12 @@
 import React from 'react'
-import { Layout, Icon } from 'antd'
+import Grid from '../components/grid'
 
-import Header from '../components/header'
-import Breadcrumb from '../components/breadcrumb'
-import Sidebar from '../components/sidebar'
-
-const { Footer, Content } = Layout
-const MainLayout = ({ children, pageTitle }) => {
+const Layout = ({ children }) => {
   return (
-    <Layout style={{ minHeight: '100vh' }}>
-      <Sidebar />
-      <Layout>
-        <Header />
-        <Content style={{ margin: '0 16px' }}>
-          <Breadcrumb pageTitle={pageTitle} />
-          {children}
-        </Content>
-        <Footer style={{ textAlign: 'center' }}>
-          <Icon type="github" />
-        </Footer>
-      </Layout>
-    </Layout>
+    <div>
+      <Grid>{children}</Grid>
+    </div>
   )
 }
 
-export default MainLayout
+export default Layout

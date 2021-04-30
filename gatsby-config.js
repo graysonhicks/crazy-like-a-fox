@@ -25,20 +25,7 @@ module.exports = {
         imagePath: 'images',
       },
     },
-    {
-      resolve: 'gatsby-plugin-less',
-      options: {
-        lessOptions: {
-          javascriptEnabled: true,
-        },
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-antd',
-      options: {
-        style: true,
-      },
-    },
+    'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
